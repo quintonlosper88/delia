@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Salon Odelia - Services</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'website2/img/core-img/favicon.ico' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'website2/css/style.css' %}">
+
+</head>
+
+<body>
+   
+    {% include 'website/header.html'%}
+    <!-- Header Area End -->
+
+    <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area section-padding-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2>Our Services</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'website:index'%}"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+
+    <!-- Service Area Start -->
+    <section class="akame-service-area">
+
+        <!-- Single Service Item -->
+        <div class="single--service--item d-flex flex-wrap align-items-center">
+            <!-- Service Content -->
+            <div class="service-content">
+                <div class="service-text">
+                    <h2> {{services.0.category}} </h2>
+                        {% for each in services%}
+                            {% if each.category == services.0.category %}
+                                <p><span>{{each.name}}</span><span>R {{each.price}}</span></p>
+                            {% endif %}
+                        {% endfor %} 
+                </div>
+            </div>
+            <!-- Service Thumbnail -->
+            <div class="service-thumbnail bg-img jarallax" style="background-image: url({% static 'website2/img/bg-img/30.jpg'%});"></div>
+        </div>
+
+        <!-- Single Service Item -->
+        <div class="single--service--item odd-item d-flex flex-wrap align-items-center">
+            <!-- Service Thumbnail -->
+            <div class="service-thumbnail bg-img jarallax" style="background-image: url({% static 'website2/img/bg-img/31.jpg'%});"></div>
+            <!-- Service Content -->
+            <div class="service-content">
+                <div class="service-text">
+                    <h2> {{services.5.category}} </h2>
+                        {% for each in services%}
+                            {% if each.category == services.5.category %}
+                                <p><span>{{each.name}}</span><span>R {{each.price}}</span></p>
+                            {% endif %}
+                        {% endfor %} 
+                        <h2> {{services.9.category}} </h2>
+                        {% for each in services%}
+                            {% if each.category == services.9.category %}
+                                <p><span>{{each.name}}</span><span>R {{each.price}}</span></p>
+                            {% endif %}
+                        {% endfor %} 
+                        <h2> {{services.17.category}} </h2>
+                        {% for each in services%}
+                            {% if each.category == services.17.category %}
+                                <p><span>{{each.name}}</span><span>R {{each.price}}</span></p>
+                            {% endif %}
+                        {% endfor %} 
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Service Item -->
+        <div class="single--service--item d-flex flex-wrap align-items-center">
+            <!-- Service Content -->
+            <div class="service-content">
+                <div class="service-text">
+                    <h2> {{services.10.category}} </h2>
+                        {% for each in services%}
+                            {% if each.category == services.10.category %}
+                                <p><span>{{each.name}}</span><span>R {{each.price}}</span></p>
+                            {% endif %}
+                        {% endfor %} 
+                    
+                        <h2> {{services.14.category}} </h2>
+                        {% for each in services%}
+                            {% if each.category == services.14.category %}
+                                <p><span>{{each.name}}</span><span>R {{each.price}}</span></p>
+                            {% endif %}
+                        {% endfor %} 
+                </div>
+            </div>
+            <!-- Service Thumbnail -->
+            <div class="service-thumbnail bg-img jarallax" style="background-image: url({% static 'website2/img/bg-img/32.jpg'%});"></div>
+        </div>
+
+
+
+    </section>
+    <!-- Service Area End -->
+
+    <!-- Footer Area Start -->
+    {% include 'website/footer.html'%}
+    <!-- Footer Area End -->
+
+    <!-- All JS Files -->
+    <!-- jQuery -->
+    <script src="{% static 'website2/js/jquery.min.js'%}"></script>
+    <!-- Popper -->
+    <script src="{% static 'website2/js/popper.min.js'%}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'website2/js/bootstrap.min.js'%}"></script>
+    <!-- All Plugins -->
+    <script src="{% static 'website2/js/akame.bundle.js'%}"></script>
+    <!-- Active -->
+    <script src="{% static 'website2/js/default-assets/active.js'%}"></script>
+
+</body>
+
+</html>
